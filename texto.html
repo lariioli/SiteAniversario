@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mensagem de Aniversário</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #ffa7c4; 
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #ffd6e0; 
+      width: 350px;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff3366;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .player-section {
+      margin-bottom: 20px;
+    }
+    .player-section p {
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .player-section audio {
+      outline: none;
+    }
+
+    .mensagem {
+      background: #fff;
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .mensagem h2 {
+      color: #ff3366;
+      margin-bottom: 10px;
+    }
+
+    .mensagem p {
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .mensagem img {
+      max-width: 100%;
+      display: block;
+      margin: 10px auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz Vida!</h1>
+    <div class="player-section">
+      <p>Antes de ler, clique para ouvir a música!</p>
+      <audio id="audioPlayer" controls>
+        <source src="audio/AUD-20250215-WA0108.m4a" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="mensagem">
+      <img src="img/IMG-20250202-WA0034.jpg" alt="Foto Início 2">
+
+      <h2>Oii Lelê, Feliz Aniversário! 🎉</h2>
+      <p>
+        Aqui vai a sua mensagem de aniversário!  
+        Desejo tudo de melhor para você hoje e sempre.  
+        Aproveite seu dia ao máximo!
+      </p>
+
+      <img src="img/IMG-20241020-WA0011.jpg" alt="Foto Final 1">
+      <img src="img/IMG-20241019-WA0081.jpg" alt="Foto Final 2">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Envelope</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    }
+
+    body {
+      background: #ffa7c4; 
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; 
+      position: relative;
+    }
+
+    .envelope-container {
+      width: 250px;
+      height: 160px;
+      background: url("envelope.png") no-repeat center center / contain;
+      cursor: pointer;
+      animation: subirEnvelope 1s forwards;
+      transform: translateY(200%); 
+      position: relative;
+    }
+
+    @keyframes subirEnvelope {
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .envelope-icon {
+      position: absolute;
+      width: 200px; 
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .envelope-container.open {
+      animation: openEnvelope 0.8s forwards;
+    }
+
+    @keyframes openEnvelope {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="envelope-container" id="envelope">
+    <img src="img/envelope.png" alt="Envelope" class="envelope-icon">
+  </div>
+
+  <script>
+    const envelope = document.getElementById('envelope');
+
+    envelope.addEventListener('click', () => {
+      envelope.classList.add('open');
+      setTimeout(() => {
+        window.location.href = "texto.html";
+      }, 800);
+    });
+  </script>
+</body>
+</html>
